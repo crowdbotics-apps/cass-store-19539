@@ -44,3 +44,8 @@ class Lokation(models.Model):
     address2 = models.CharField(max_length=256,)
     state = models.CharField(max_length=5,)
     zipcode = models.IntegerField()
+
+
+class Inventory(models.Model):
+    "Generated Model"
+    item = models.CharField(max_length=256,)
