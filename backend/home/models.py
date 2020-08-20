@@ -62,3 +62,15 @@ class Storez(models.Model):
     inventory = models.ForeignKey(
         "home.Inventory", on_delete=models.CASCADE, related_name="storez_inventory",
     )
+    description = models.ForeignKey(
+        "home.Description",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="storez_description",
+    )
+
+
+class Description(models.Model):
+    "Generated Model"
+    description = models.CharField(max_length=256,)

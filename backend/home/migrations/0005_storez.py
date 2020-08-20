@@ -7,17 +7,46 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0004_inventory'),
+        ("home", "0004_inventory"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Storez',
+            name="Storez",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('inventory', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='storez_inventory', to='home.Inventory')),
-                ('location', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='storez_location', to='home.Lokation')),
-                ('name', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='storez_name', to='home.Name')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "inventory",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="storez_inventory",
+                        to="home.Inventory",
+                    ),
+                ),
+                (
+                    "location",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="storez_location",
+                        to="home.Lokation",
+                    ),
+                ),
+                (
+                    "name",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="storez_name",
+                        to="home.Name",
+                    ),
+                ),
             ],
         ),
     ]
